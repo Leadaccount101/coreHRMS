@@ -66,6 +66,7 @@ public class TestPIMPage extends BasePage {
 	@Test(description = "Verify that the search functionality returns the correct employee", priority = 1)
 	public void searchEmployee() throws Exception {
 		loginPage.login();        //i am added this logic
+		TestNGUtility.assertTrue(CommonUtils.getElementText(loginPage.getWelcomePage()), "Welcome selenium");  //i am added this logic
 	}
 
 	@Test(description = "Verify that employee details can be edited successfully",groups= {"Smoke"}, priority = 2)
